@@ -2,6 +2,9 @@
 	padding:5px;
 	display: inline-block;
 	width: 60%;
+	@media(min-width: $tablet-sm){
+		width: 40%;
+	}
 }
 .btn--menu{
 	display: inline-block;
@@ -11,24 +14,53 @@
 	vertical-align: bottom;
 	text-align: right;
 	margin-left: 55px;
+	@media(min-width: $tablet-sm){
+		display: none;
+	}
 }
 .header-contact{
-padding:10px 5px;
+  padding:10px 5px;
+    @media(min-width: $tablet-sm) {
+	   display: inline-flex;
+	   width:55%;
+	 }
+	 &__time{
+	 	position: relative;
+	 	padding:0 20px;
+	 }
+	 &__time::before{
+		display: block;
+		content: "";
+		position: absolute;
+		width:20px;
+		height: 20px;
+		background: url('/img/phone.svg')
+	 }
 }
 .main-banner{
 	background-image: url("/img/bg-mobile.png");
 	background-repeat: no-repeat;
 	margin:0 auto;
 	padding: 30px 15px 40px;
+	@media(min-width: $desktop){
+	background-image: url("/img/bg.png");
+	}
 	&__text{
 		margin: 5px 0 0;
 	}
 }
 .main-menu{
 	display: none;
-	& ul{
+	&__items{
 		margin: 0;
 		list-style: none;
 		padding: 0;
+		@media(min-width: $tablet-sm){
+			display: flex;
+			justify-content: space-evenly;
+		}
+	}
+	@media(min-width: $tablet-sm){
+		display: block;
 	}
 }

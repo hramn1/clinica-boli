@@ -32,4 +32,17 @@ h3,h4,h5,h6{
   margin-right: auto;
   margin-left: auto;
   padding: 0 5px;
+  @media(min-width: $mobile-lg){
+    width: 460px
+    }
+  @media(min-width: $tablet-sm){
+    width: 720px;
+  }
+  @media(min-width: $tablet-lg)
+  {
+    width: 970px;
+  }
+  @media(min-width: $desktop){
+    width: 1170px;
+  }
 }
