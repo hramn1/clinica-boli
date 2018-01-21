@@ -1,0 +1,17 @@
+.feature__title{
+	text-align: center;
+}
+.feature__items{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-evenly;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+@media(min-width: $desktop)
+{
+	.feature__item{
+		width:30%;
+	}
+}
