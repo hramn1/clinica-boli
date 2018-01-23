@@ -1,19 +1,26 @@
+header{
+	background-image: linear-gradient(#fefcea, #fefcea 40%, #80f286 80%);
+}
 .logo {
 	padding:5px;
 	display: inline-block;
 	width: 60%;
+	margin: 10px 5px 15px;
+	vertical-align: middle;
 	@media(min-width: $tablet-sm){
 		width: 40%;
 	}
 }
 .btn--menu{
 	display: inline-block;
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
 	background-image: url("/img/HAMBURGER-MENU.svg");
-	vertical-align: bottom;
+	vertical-align: middle;
 	text-align: right;
 	margin-left: 55px;
+	background-color: transparent;
+border: none;
 	@media(min-width: $tablet-sm){
 		display: none;
 	}
@@ -26,15 +33,47 @@
 	 }
 	 &__time{
 	 	position: relative;
-	 	padding:0 20px;
+	 	margin-left: 45px;
 	 }
 	 &__time::before{
 		display: block;
 		content: "";
 		position: absolute;
-		width:20px;
-		height: 20px;
-		background: url('/img/phone.svg')
+		width: 25px;
+		height: 25px;
+		left: -45px;
+		top: 2px;
+		background: url('/img/clock.svg')
+	 }
+	 	 &__phone{
+	 	position: relative;
+	 	margin-left: 45px;
+	 	font-size: 1.1em;
+	 }
+	 &__phone::before{
+	 			display: block;
+		content: "";
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		left: -45px;
+		top: 2px;
+		background: url('/img/phone.svg');
+		transform: rotate(95deg)
+	 }
+	 	 	 &__adess{
+	 	position: relative;
+	 	margin-left: 45px;
+	 }
+	 &__adess::before{
+	 		 	display: block;
+		content: "";
+		position: absolute;
+		width: 22px;
+		height: 25px;
+		left: -45px;
+		top: 2px;
+		background: url('/img/address-book.svg')
 	 }
 }
 .main-banner{
@@ -43,6 +82,7 @@
 	background-size: cover;
 	margin:0 auto;
 	padding: 30px 15px 40px;
+	box-shadow: 0 -3px 9px 2px rgba(0,0,0, 0.2);
 	@media(min-width: $desktop){
 		background-image: url("/img/bg.png");
 		&__title{
