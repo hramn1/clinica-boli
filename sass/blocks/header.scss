@@ -1,4 +1,4 @@
-header{
+.header-widget{
 	background-image: linear-gradient(#fefcea, #fefcea 40%, #80f286 80%);
 }
 .logo {
@@ -20,7 +20,7 @@ header{
 	text-align: right;
 	margin-left: 55px;
 	background-color: transparent;
-border: none;
+	border: none;
 	@media(min-width: $tablet-sm){
 		display: none;
 	}
