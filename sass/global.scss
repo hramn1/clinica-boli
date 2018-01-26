@@ -12,7 +12,6 @@
   src:url(../fonts/Roboto.woff2) format("woff2"),
   url(../fonts/Roboto.woff) format("woff");
 }
-
 body {
   font-family: "Roboto", "Arial", sans-serif;
   background-color: $grey-color;
@@ -26,6 +25,9 @@ h2 {
 }
 h3, h4, h5, h6{
 	font-size: 1.2em;
+}
+a {
+	text-decoration: none;
 }
 .container {
   margin-right: auto;

@@ -9,6 +9,35 @@
 	padding:0;
 	list-style:none;
 }
+.feature__item{
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background-color: $features-bgc;
+	border-bottom-radius: 20px;
+	& h3{
+		background-color: $features-color;
+		margin: 0;
+		padding: 10px 12px 22px;
+		color: $white;
+		position: relative;
+		&::after{
+			content: "";
+			display: block;
+			height: 10px;
+			-moz-transform: skewY(-1.5deg);
+			-webkit-transform: skewY(-1.5deg);
+			-o-transform: skewY(-1.5deg);
+			-ms-transform: skewY(-1.5deg);
+			transform: skewY(-1.5deg);
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			width: 100%;
+			background-color: $features-color;
+		}
+	}
+
+}
 @media(min-width: $desktop)
 {
 	.feature__item{

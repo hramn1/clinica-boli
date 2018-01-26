@@ -1,24 +1,31 @@
 .widget{
     background-image: linear-gradient(#80f286, #fefcea 100%);
+    box-shadow: 0 7px 8px 1px rgba(0,0,0,.6);
 }
 .widget-pain{
   display:flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 20px 5px 30px;
   &__title{
     flex-basis: 100%;
     text-align: center;
+    text-transform: uppercase;
+    color: $white;
   }
   &__items{
     text-align: center;
     transition: 400ms;
+    padding: 10px;
+    & h3{
+      color: $blue;
+    }
     @media(min-width: $tablet-sm){
       flex-basis: 30%;
     }
     &:hover{
       scale:1.2;
       transform: translateY(-10px);
-      background-color: $white;
       box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.6);
       transition: 400ms;
     }

@@ -1,5 +1,5 @@
 .header-widget{
-	background-image: linear-gradient(#fefcea, #fefcea 40%, #80f286 80%);
+	background-image: linear-gradient(#fefcea,#c9ffc9 40%,#80f286 80%);
 }
 .logo {
 	padding:5px;
@@ -83,6 +83,16 @@
 	margin:0 auto;
 	padding: 30px 15px 40px;
 	box-shadow: 0 -3px 9px 2px rgba(0,0,0, 0.2);
+	&__title{
+		margin: 60px auto 40px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&__text{
+		margin: 40px auto;
+		text-align: center;
+		font-weight: 700;
+	}
 	@media(min-width: $desktop){
 		background-image: url("/img/bg.png");
 		&__title{
@@ -95,7 +105,7 @@
 		width: 400px;
 		text-align: center;
 		font-size: 1.2em;
-	}
+		}
 	}
 }
 .main-menu{
@@ -112,4 +122,13 @@
 	@media(min-width: $tablet-sm){
 		display: block;
 	}
+}
+.main-menu--show{
+	position: fixed;
+top: 0;
+width: 60%;
+background: aqua;
+left: 0;
+height: 100%;
+z-index: 40;
 }
