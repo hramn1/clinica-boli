@@ -1,0 +1,5 @@
+@mixin my_padding_margin($padding: 10px 15px 20px, $margin: 20px 15px 30px)
+{
+  padding: $padding;
+  margin: $margin;
+}
