@@ -1,6 +1,6 @@
 .header-widget{
-	//background-image: linear-gradient(#006d68, #c9ffc9 80%);
-	background-color: $green;
+	background-image: linear-gradient(transparentize($green,0.8), transparentize($green,0.25) 80%);
+	//background-color: transparentize($green,0.4);
 }
 .logo {
 	padding:5px;
