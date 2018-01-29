@@ -1,3 +1,13 @@
 .footer{
-	background-color: $green;
+  background-color: $green;
+  padding: 25px 10px 30px;
+  color: $white;
+  border-top: 2px solid darken($green, 10%);
+  & p {
+    margin:0;
+  }
+}
+.ya-map{
+  border-top: 2px solid lighten($green, 10%);
+  padding: 0 1px;
 }
