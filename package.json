@@ -42,6 +42,7 @@
   "dependencies": {
     "del": "^3.0.0",
     "popper.js": "^1.12.5",
+    "postcss": "^6.0.16",
     "rename": "^1.0.4"
   }
 }
