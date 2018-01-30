@@ -37,7 +37,10 @@ a {
   padding: 0 15px;
   @media(min-width: $mobile-lg){
     width: 460px
-    }
+  }
+  @media(min-width: 600px){
+    width: 570px
+  }
   @media(min-width: $tablet-sm){
     width: 720px;
   }
