@@ -4,10 +4,21 @@
   color: $white;
   border-top: 2px solid darken($green, 10%);
   & p {
-    margin:0;
+    font-size: 18px;
   }
 }
 .ya-map{
   border-top: 2px solid lighten($green, 10%);
   padding: 0 1px;
+}
+@media(min-width: $tablet-sm){
+	.copyright{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		& p{
+				flex-basis:40%;
+				margin: 10px 15px;
+		}
+	}
 }

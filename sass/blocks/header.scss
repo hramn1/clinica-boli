@@ -1,6 +1,5 @@
 .header-widget{
   background-image: linear-gradient(transparentize($green,0.8), transparentize($green,0.25) 80%);
-  //background-color: transparentize($green,0.4);
 }
 .logo {
   padding:5px;
@@ -9,7 +8,7 @@
   margin: 10px 5px 15px;
   vertical-align: middle;
   @media(min-width: $tablet-sm){
-    width: 40%;
+    width: 35%;
   }
 }
 .btn--menu{
@@ -28,13 +27,18 @@
 }
 .header-contact{
   padding:10px 5px;
-    @media(min-width: $tablet-sm) {
-     display: inline-flex;
-     width:55%;
-   }
+  & a {
+    color: inherit;
+  }
+  @media(min-width: $tablet-sm) {
+   display: inline-flex;
+   width:62%;
+  }
    &__time{
     position: relative;
     margin-left: 45px;
+    font-size: 1.1em;
+    color: $grey-color;
    }
    &__time::before{
     display: block;
@@ -46,13 +50,14 @@
     top: 2px;
     background: url('/img/clock.svg')
    }
-     &__phone{
+  &__phone{
     position: relative;
     margin-left: 45px;
     font-size: 1.1em;
+    color: $grey-color;
    }
    &__phone::before{
-        display: block;
+    display: block;
     content: "";
     position: absolute;
     width: 25px;
@@ -62,9 +67,11 @@
     background: url('/img/phone.svg');
     transform: rotate(95deg)
    }
-       &__adess{
+    &__adess{
     position: relative;
     margin-left: 45px;
+    font-size: 1.1em;
+    color: $grey-color;
    }
    &__adess::before{
         display: block;
@@ -126,7 +133,7 @@
 @media(max-width: $tablet-sm - 1px) {
   .main-menu__offcanvas{
     position: fixed;
-    transform: translateX(-100%);
+    transform: translateX(-130%);
     top: 0;
     width: 45%;
     background: #333333;
@@ -135,53 +142,66 @@
     left: 0;
     height: 100%;
     z-index: 40;
-    //display: none;
     transition: 400ms;
     &--show{
-          transform: translateX(0%);
-          transition: 400ms;
-          //display: block;
+      transform: translateX(0%);
+      transition: 400ms;
+    }
+    &::after{
+      content:"";
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      top:0;
+      right: -20px;
+      background: #333333;
+      z-index: 40;
+      border-left: 1px solid rgba(0, 0, 0, 0.3);
+      box-shadow: inset 2px 0 0 rgba(255, 255, 255, 0.05);
     }
   }
 
 }
-.close-cross
-{
-  position:absolute;
-  width:21px;
-  height:21px;
-  background-color:transparent;
-  top: 80px;
-  right: 90px;
-  cursor:pointer;
-}
-.close-cross::after, .close-cross::before
-{
-  border-bottom: 4px solid #fb565a;
-  opacity:0.3;
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 0px;
-  width:21px;
-}
-.close-cross::before
-{
-  -webkit-transform: rotate(135deg);
-      -ms-transform: rotate(135deg);
-          transform: rotate(135deg);
-}
-.close-cross::after
-{
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.close-cross:hover::after, .close-cross:hover::before
-{
-  opacity:1;
-}
-.close-cross:active::after, .close-cross:active::before
-{
-  opacity:0.1;
+@media(max-width: $tablet-sm - 1px){
+  .close-cross
+  {
+    position:absolute;
+    width:21px;
+    height:21px;
+    background-color:transparent;
+    top: 80px;
+    right: 90px;
+    cursor:pointer;
+  }
+  .close-cross::after, .close-cross::before
+  {
+    border-bottom: 4px solid #fb565a;
+    opacity:0.3;
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width:21px;
+  }
+  .close-cross::before
+  {
+    -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  .close-cross::after
+  {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .close-cross:hover::after, .close-cross:hover::before
+  {
+    opacity:1;
+  }
+  .close-cross:active::after, .close-cross:active::before
+  {
+    opacity:0.1;
+  }
 }
