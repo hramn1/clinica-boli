@@ -3,9 +3,20 @@
   var menuButton = document.querySelector(".btn--menu");
   var menuCanvas = document.querySelector(".main-menu__offcanvas");
   var feature = document.querySelectorAll(".feature__item");
-    menuButton.addEventListener('click', function(evt){
+  var menuClose = document.querySelector(".close-cross");
+  menuButton.addEventListener('click', function(evt){
     menuCanvas.classList.add('main-menu__offcanvas--show');
-    });
+  });
+  menuClose.addEventListener('click', function(evt){
+    menuCanvas.classList.remove('main-menu__offcanvas--show');
+  });
+  window.addEventListener('keydown', function(evt){
+    if(evt.keyCode == 27){
+      if(menuCanvas.classList.contains('main-menu__offcanvas--show')){
+        menuCanvas.classList.remove('main-menu__offcanvas--show');
+      }
+    }
+  });
   window.addEventListener('scroll', function(evt){
     var scrollPage = window.pageYOffset;
     var scrollHeightPage = document.documentElement.scrollHeight;

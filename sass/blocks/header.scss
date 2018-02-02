@@ -5,7 +5,7 @@
   padding:5px;
   display: inline-block;
   width: 60%;
-  margin: 10px 5px 15px;
+  margin: 0 5px 15px;
   vertical-align: middle;
   @media(min-width: $tablet-sm){
     width: 35%;
@@ -33,11 +33,12 @@
   @media(min-width: $tablet-sm) {
    display: inline-flex;
    width:62%;
+   vertical-align: middle;
+   justify-content: space-around;
   }
    &__time{
     position: relative;
-    margin-left: 45px;
-    font-size: 1.1em;
+    margin-left: 55px;
     color: $grey-color;
    }
    &__time::before{
@@ -48,12 +49,15 @@
     height: 25px;
     left: -45px;
     top: 2px;
-    background: url('/img/clock.svg')
+    background: url('/img/clock.svg');
+            @media (min-width: $tablet-sm) {
+    	left: -36px;
+			top: 26px;
+    }
    }
   &__phone{
     position: relative;
-    margin-left: 45px;
-    font-size: 1.1em;
+    margin-left: 55px;
     color: $grey-color;
    }
    &__phone::before{
@@ -65,12 +69,15 @@
     left: -45px;
     top: 2px;
     background: url('/img/phone.svg');
-    transform: rotate(95deg)
+    transform: rotate(95deg);
+    @media (min-width: $tablet-sm) {
+    	left: -36px;
+			top: 26px;
+    }
    }
     &__adess{
     position: relative;
-    margin-left: 45px;
-    font-size: 1.1em;
+    margin-left: 55px;
     color: $grey-color;
    }
    &__adess::before{
@@ -81,7 +88,11 @@
     height: 25px;
     left: -45px;
     top: 2px;
-    background: url('/img/address-book.svg')
+    background: url('/img/address-book.svg');
+            @media (min-width: $tablet-sm) {
+    	left: -36px;
+			top: 26px;
+    }
    }
 }
 .main-banner{
@@ -95,14 +106,19 @@
     margin: 60px auto 40px;
     text-align: center;
     text-transform: uppercase;
+    text-shadow: 1px 1px 1px $white;
   }
   &__text{
     margin: 40px auto;
     text-align: center;
     font-weight: 700;
+    text-shadow: 1px 1px 1px $white;
+    font-size: 16px;
+    text-transform: uppercase;
   }
   @media(min-width: $desktop){
     background-image: url("/img/bg.png");
+    padding: 140px 15px 140px;
     &__title{
       width: 400px;
       margin: 40px auto 20px;
@@ -110,13 +126,18 @@
     }
       &__text{
     margin: 15px auto 30px;
-    width: 400px;
+    width: 430px;
     text-align: center;
     font-size: 1.2em;
     }
   }
 }
 .main-menu{
+	color: $white;
+	text-transform: uppercase;
+	& a {
+		color:inherit;
+	}
   &__items{
     margin: 0;
     list-style: none;
@@ -125,10 +146,24 @@
       display: flex;
       justify-content: space-evenly;
     }
+    & li.active{
+    	color: #591d03;
+    }
   }
   @media(min-width: $tablet-sm){
     display: block;
+    padding-bottom: 20px;
   }
+}
+.drop-menu{
+	display: none;
+	list-style: none;
+	@media (min-width: $tablet-sm) {
+		position: absolute;
+	}
+}
+.main-menu__dropdown:hover .drop-menu{
+	display: block;
 }
 @media(max-width: $tablet-sm - 1px) {
   .main-menu__offcanvas{
@@ -143,6 +178,13 @@
     height: 100%;
     z-index: 40;
     transition: 400ms;
+    & li {
+    	margin-top: 20px;
+    	font-size: 1.1em;
+    	padding: 10px 0;
+    	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
     &--show{
       transform: translateX(0%);
       transition: 400ms;
@@ -170,14 +212,14 @@
     width:21px;
     height:21px;
     background-color:transparent;
-    top: 80px;
-    right: 90px;
+		top: 30px;
+		right: 20px;
     cursor:pointer;
   }
   .close-cross::after, .close-cross::before
   {
     border-bottom: 4px solid #fb565a;
-    opacity:0.3;
+    opacity:0.7;
     content: "";
     position: absolute;
     top: 10px;
