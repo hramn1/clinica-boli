@@ -32,9 +32,12 @@
   }
   @media(min-width: $tablet-sm) {
    display: inline-flex;
-   width:62%;
+   width:100%;
    vertical-align: middle;
    justify-content: space-around;
+  }
+  @media (min-width: $desktop) {
+    width: 62%;
   }
    &__time{
     position: relative;
@@ -156,7 +159,8 @@
   }
 }
 .drop-menu{
-	display: none;
+	//display: none;
+  height: 0;
 	list-style: none;
 	@media (min-width: $tablet-sm) {
 		position: absolute;
