@@ -21,7 +21,7 @@
     "postcss-scss": "^1.0.2",
     "run-sequence": "1.2.2",
     "sass-lint": "^1.10.2",
-    "stylelint": "^7.11.1"
+    "stylelint": "^7.13.0"
   },
   "scripts": {
     "build": "gulp build",
@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "del": "^3.0.0",
+    "jshint": "^2.9.5",
     "popper.js": "^1.12.5",
     "postcss": "^6.0.16",
     "rename": "^1.0.4"

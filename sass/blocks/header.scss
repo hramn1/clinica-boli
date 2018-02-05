@@ -123,15 +123,20 @@
     background-image: url("/img/bg.png");
     padding: 140px 15px 140px;
     &__title{
-      width: 400px;
-      margin: 40px auto 20px;
-      text-align: center;
+      //width: 530px;
+      font-size: 2em;
+    	line-height: 2em;
+      margin: 40px 200px 20px 200px;
+      text-align: right;
     }
       &__text{
     margin: 15px auto 30px;
-    width: 430px;
-    text-align: center;
-    font-size: 1.2em;
+    //width: 530px;
+    text-align: right;
+
+          font-size: 1.4em;
+    	line-height: 1.4em;
+      margin: 40px 200px 20px 200px;
     }
   }
 }
@@ -148,9 +153,9 @@
     @media(min-width: $tablet-sm){
       display: flex;
       justify-content: space-evenly;
-    }
-    & li.active{
+          & li.active{
     	color: #591d03;
+    }
     }
   }
   @media(min-width: $tablet-sm){
@@ -161,9 +166,14 @@
 .drop-menu{
 	//display: none;
   height: 0;
+  overflow: hidden;
 	list-style: none;
 	@media (min-width: $tablet-sm) {
 		position: absolute;
+		background: bisque;
+		margin: 20px;
+		padding: 10px 15px;
+		display: none;
 	}
 }
 .main-menu__dropdown:hover .drop-menu{

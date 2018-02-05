@@ -2,41 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+  <meta name="format-detection" content="telephone=no">
   <title>Клиника Боли</title>
+  <link href = "css/style.min.css" rel="stylesheet" type="text/css">
+  <script src="js/custom.js" type="text/javascript" defer></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="img/logo.png" alt="">
-      </div>
-      <button class="btn--menu"></button>
-      <section class="header-contact">
-        <div class="header-contact__time">
-          <p>9.00-21.00</p>
+    <header>
+    <section class="header-widget">
+      <div class="container">
+        <div class="logo">
+          <a href="/"><img src="img/logo.png" alt="Логотип" width="200" height="125"></a>
         </div>
-        <div class="header-contact__adess">
-          <p> Кисловодск</p>
-        </div>
-        <div class="header-contact__phone">
-          <p>+799999999</p>
-        </div>
-      </section>
-      <nav class="main-menu">
-        <ul>
-          <li>Главная</li>
-          <li>О клинике</li>
-          <ul>
-            <li>Врачи</li>
-            <li>Пациентам</li>
+        <button class="btn btn--menu"></button>
+        <section class="header-contact">
+          <div class="header-contact__time">
+            <p>Пн-Сб: 9.00-19.00<br>
+               Вс: Выходной</p>
+          </div>
+          <div class="header-contact__adess">
+            <p> г. Кисловодск,<br> улица Куйбышева, д. 35</p>
+          </div>
+          <div class="header-contact__phone">
+            <p><a href="tel:+79289299910">8-928-929-99-10</a><br>
+            <a href="mailto:pain_clinic@mail.ru">E-mail: pain_clinic@mail.ru</a></p>
+          </div>
+        </section>
+        <nav class="main-menu main-menu__offcanvas">
+          <span class="close-cross"></span>
+          <ul class="main-menu__items">
+            <li class="active">Главная</li>
+            <li class="main-menu__dropdown">О клинике
+              <ul class="drop-menu">
+                <li>Врачи</li>
+                <li>Пациентам</li>
+              </ul>
+            </li>
+            <li><a href="diseace.html">Заболевания</a></li>
+            <li>Методы лечения</li>
+            <li>Отзывы</li>
+            <li>Контакты</li>
           </ul>
-          <li>Заболевания</li>
-          <li>Методы лечения</li>
-          <li>Отзывы</li>
-          <li>Контакты</li>
-        </ul>
-      </nav>
-    </div>
+        </nav>
+      </div>
+    </section>
   </header>
   <main class="main-content">
 <div class="container">
@@ -69,13 +79,16 @@
   </article>
     </div>
   </main>
-  <footer>
+  <footer class="footer">
     <div class="container">
     <section class="footer-menu">
       
     </section>
     <section class="copyright">
       <p>Copyright © 2018 </p>
+      <p>ООО ЛДЦ  &laquo;Клиника лечения боли&raquo; . Лицензия № от выдана </p>
+      <p>Имеются противопоказания, проконсультируйтесь со специалистом. Представленная на сайте информация не является офертой.</p>
+      <p>Цены, указанные на сайте носят ознакомительный характер и требуют уточнения у администратора.</p>
     </section>
     </div>
   </footer>
