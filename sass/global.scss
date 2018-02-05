@@ -45,19 +45,19 @@ a {
   margin-left: auto;
   padding: 0 15px;
   @media(min-width: $mobile-lg){
-    width: 460px
+    width: 450px
   }
   @media(min-width: 600px){
     width: 555px
   }
   @media(min-width: $tablet-sm){
-    width: 720px;
+    width: 710px;
   }
   @media(min-width: $tablet-lg)
   {
     width: 950px;
   }
   @media(min-width: $desktop){
-    width: 1170px;
+    width: 1150px;
   }
 }
