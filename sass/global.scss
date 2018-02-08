@@ -44,6 +44,7 @@ a {
   margin-right: auto;
   margin-left: auto;
   padding: 0 15px;
+  box-sizing: border-box;
   @media(min-width: $mobile-lg){
     width: 450px
   }
